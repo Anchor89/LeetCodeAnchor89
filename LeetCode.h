@@ -3,7 +3,7 @@
 #include<vector>
 #include<stack>
 #include<list>
-#include<priority_queue>
+#include<queue>
 #include<algorithm>
 
 using namespace std;
