@@ -16,11 +16,11 @@ public:
     int val = head->val;
     while(head != NULL) {
       if (head->val < val) {
-	t1 = t1->next = head;
+        t1 = t1->next = head;
       } else if (head->val == val) {
-	t2 = t2->next = head;
+        t2 = t2->next = head;
       } else {
-	t3 = t3->next = head;
+        t3 = t3->next = head;
       }
       head = head->next;
     }
