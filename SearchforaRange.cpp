@@ -15,10 +15,9 @@ public:
     vector<int> searchRange(int A[], int n, int target) {
         vector<int> result(2, -1);
         if (n == 0 || target < A[0] || target > A[n-1]) return result;
-        if (A[0] == target) result[0] = 0;
-        else result[0] = searchPair(A, n, target).second;
-        if (A[n-1] == target) result[1] = n-1;
-        else result[1] = searchPair(A, n, target+1).first;
+        result[0] = A[0] == target? 0 : searchPair(A, n, target).second;
+        result[1] = A[n-1] == target? n-1 : searchPair(A, n, target+1).first;
         return A[result[0]] == target? result:vector<int>(2, -1);
     }
 };
+
