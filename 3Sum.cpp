@@ -7,7 +7,6 @@ public:
     // the same Solution instance will be reused for each test case.
     vector<vector<int>> result;
     int sz = num.size();
-    vector<int> item(3);
     sort(num.begin(), num.end());
     for (int i=0; i<sz; i++) {
       if (i && num[i] == num[i-1]) continue;
@@ -15,8 +14,7 @@ public:
 	if (j > i+1 && num[j]==num[j-1]) continue;
 	while(k>j && num[i]+num[j]+num[k] > 0) k--;
 	if (k>j && num[i] + num[j] + num[k] == 0) {
-	  item[0] = num[i];item[1] = num[j]; item[2] = num[k];
-	  result.push_back(item);
+	  result.push_back(vector<int>{num[i], num[j], num[k]});
 	}
       }
     }
