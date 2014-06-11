@@ -2,6 +2,9 @@
 
 class Solution {
 public:
+  /**
+   * dp[i][j] = (j>0 && dp[i-1][j-1] && s3[i-1]==s1[j-1]) || (i-j>0 && dp[i-1][j] && s3[i-1] == s2[i-j-1]);
+   */
   bool isInterleave(string s1, string s2, string s3) {
     int sz1 = s1.size(), sz2 = s2.size(), sz3 = s3.size();
     if (sz1+sz2!=sz3) return false;

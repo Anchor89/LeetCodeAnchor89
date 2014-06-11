@@ -11,3 +11,10 @@ public:
     return len;
   }
 };
+
+class Solution {
+public:
+  int removeElement(int A[], int n, int elem) {
+    return copy_if(A, A+n, A, [=](int i) {return i!=elem;})-A;
+  }
+};
