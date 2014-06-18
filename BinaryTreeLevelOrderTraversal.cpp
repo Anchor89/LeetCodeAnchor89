@@ -16,8 +16,8 @@ public:
       if (cur->left) q[depth^1].push(cur->left);
       if (cur->right) q[depth^1].push(cur->right);
       if (q[depth].empty()) {
-	depth^=1;
-	if (!q[depth].empty()) result.push_back(vector<int>());
+        depth^=1;
+        if (!q[depth].empty()) result.push_back(vector<int>());
       }
     }
     return result;

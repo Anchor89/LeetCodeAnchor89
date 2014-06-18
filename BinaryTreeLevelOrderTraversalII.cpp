@@ -14,14 +14,14 @@ public:
       lvl[depth].pop();
       result.back().push_back(cur->val);
       if (cur->left) {
-	lvl[depth^1].push(cur->left);
+        lvl[depth^1].push(cur->left);
       }
       if (cur->right) {
-	lvl[depth^1].push(cur->right);
+        lvl[depth^1].push(cur->right);
       }
       if (lvl[depth].empty()) {
-	depth^=1;
-	if (!lvl[depth].empty()) result.push_back(vector<int>());
+        depth^=1;
+        if (!lvl[depth].empty()) result.push_back(vector<int>());
       }
     }
     reverse(result.begin(), result.end());
