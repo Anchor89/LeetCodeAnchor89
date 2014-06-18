@@ -44,16 +44,16 @@ public:
     while(!node.empty()) {
       Node& t = node.top();
       if (t.val == NULL) {
-	node.pop();
+        node.pop();
       } else if (t.pc == 0) {
-	node.push(Node(t.val->left));
-	t.pc++;
+        node.push(Node(t.val->left));
+        t.pc++;
       } else if (t.pc == 1) {
-	node.push(Node(t.val->right));
-	t.pc++;
+        node.push(Node(t.val->right));
+        t.pc++;
       } else {
-	result.push_back(t.val->val);
-	node.pop();
+        result.push_back(t.val->val);
+        node.pop();
       }
     }
     return result;

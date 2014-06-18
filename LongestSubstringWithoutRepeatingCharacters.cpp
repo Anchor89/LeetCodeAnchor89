@@ -10,12 +10,12 @@ public:
     in.insert(s[head]);
     while(tail < sz) {
       if (!in.insert(s[tail++]).second) {
-	while(s[head] != s[tail-1]) {
-	  in.erase(s[head++]);
-	}
-	if (s[head] == s[tail-1]) head++; // head++ instead of in.erase(s[head++])
+        while(s[head] != s[tail-1]) {
+          in.erase(s[head++]);
+        }
+        if (s[head] == s[tail-1]) head++; // head++ instead of in.erase(s[head++])
       } else {
-	result = max(result, tail-head);
+        result = max(result, tail-head);
       }
     }
     return result;

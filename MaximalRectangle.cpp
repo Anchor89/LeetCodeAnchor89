@@ -12,9 +12,9 @@ public:
     for (int i=1; i<size; i++) {
       lb = i;
       while(!s.empty() && s.top().second > row[i]) {
-	lb = s.top().first;
-	result = max(result, s.top().second*(i-lb));
-	s.pop();
+        lb = s.top().first;
+        result = max(result, s.top().second*(i-lb));
+        s.pop();
       }
       s.push(Pair(lb, row[i]));
     }
@@ -27,10 +27,10 @@ public:
     int result = 0;
     vector<int> height(col, 0);
     for_each(matrix.begin(), matrix.end(), [&](vector<char>& R) {
-	transform(R.begin(), R.end(), height.begin(), height.begin(), [](char c, int a) {
-	    return c=='0'?0:a+1;
-	  });
-	result = max(result, maxRow(height));    
+        transform(R.begin(), R.end(), height.begin(), height.begin(), [](char c, int a) {
+            return c=='0'?0:a+1;
+          });
+        result = max(result, maxRow(height));    
       });
     return result;
   }

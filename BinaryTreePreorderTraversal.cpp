@@ -23,20 +23,20 @@ public:
       int& op = ops.top();
       op++;
       if (op == 1) {
-	result.push_back(cur->val);
+        result.push_back(cur->val);
       } else if (op == 2) {
-	if (cur->left) {
-	  nodes.push(cur->left);
-	  ops.push(0);
-	}
+        if (cur->left) {
+          nodes.push(cur->left);
+          ops.push(0);
+        }
       } else if (op == 3) {
-	if (cur->right) {
-	  nodes.push(cur->right);
-	  ops.push(0);
-	}
+        if (cur->right) {
+          nodes.push(cur->right);
+          ops.push(0);
+        }
       } else {
-	nodes.pop();
-	ops.pop();
+        nodes.pop();
+        ops.pop();
       }
     }
     return result;

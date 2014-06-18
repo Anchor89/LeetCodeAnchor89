@@ -26,12 +26,12 @@ public:
       while(tail<size && cur+1+words[tail].size() <= L) cur+=1+words[tail++].size();
       if (tail < size) res.push_back(format(words, head, tail, cur, L)); 
       else {
-	string line = words[head++];
-	for (; head<tail;head++) {
-	  line += " " + words[head];
-	}
-	line += string(L-line.size(), ' ');
-	res.push_back(line);
+        string line = words[head++];
+        for (; head<tail;head++) {
+          line += " " + words[head];
+        }
+        line += string(L-line.size(), ' ');
+        res.push_back(line);
       }
       head = tail++;
     }

@@ -6,7 +6,7 @@ public:
   int firstMissingPositive(int A[], int n) {
     for (int i=0; i<n; i++) {
       for (int j=i; A[j] > 0 && A[j] <=n && A[j]-1 != j && A[A[j]-1] != A[j]; ) {
-	swap(A[j], A[A[j]-1]);
+        swap(A[j], A[A[j]-1]);
       }
     }
     for (int i=0; i<n; i++) {

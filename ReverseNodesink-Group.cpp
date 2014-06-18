@@ -10,16 +10,16 @@ public:
       next = t;
       for (int i=0; i<k && next; i++) next = next->next;
       if (next) {
-	sub = t->next->next;
-	t->next->next = next->next;
-	next->next = NULL;
-	next = t->next;
-	while(sub) {
-	  ListNode* tmp = sub;
-	  sub = sub->next;
-	  tmp->next = t->next;
-	  t->next = tmp;
-	}
+        sub = t->next->next;
+        t->next->next = next->next;
+        next->next = NULL;
+        next = t->next;
+        while(sub) {
+          ListNode* tmp = sub;
+          sub = sub->next;
+          tmp->next = t->next;
+          t->next = tmp;
+        }
       }
       t = next;
     }

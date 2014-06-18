@@ -9,12 +9,12 @@ public:
     string result;
     for (int i=0; i<nRows; i++) {
       for (int j=0; j<group; j++) {
-	if (i == 0 || i << 1 == item) {
-	  if (j*item+i < s.size()) result += s[j*item+i];
-	} else {
-	  if (j*item+i<s.size()) result += s[j*item+i];
-	  if (j*item+item-i<s.size()) result += s[j*item+item-i];
-	}
+        if (i == 0 || i << 1 == item) {
+          if (j*item+i < s.size()) result += s[j*item+i];
+        } else {
+          if (j*item+i<s.size()) result += s[j*item+i];
+          if (j*item+item-i<s.size()) result += s[j*item+item-i];
+        }
       }
     }
     return result;

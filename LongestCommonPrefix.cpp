@@ -12,7 +12,7 @@ public:
       if (len == strs[0].size()) break;
       char c = strs[0][len];
       for (string& s : strs) {
-	done = done || len == s.size() || s[len] != c;
+        done = done || len == s.size() || s[len] != c;
       }
     }
     return strs[0].substr(0, len);

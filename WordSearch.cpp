@@ -25,11 +25,11 @@ public:
     col = board[0].size();
     for (int i=0; i<row; i++) {
       for (int j=0; j<col; j++) {
-	if (board[i][j] == word[0]) {
-	  if (dfs(board, word, i, j, 0)) {
-	    return true;
-	  }
-	}
+        if (board[i][j] == word[0]) {
+          if (dfs(board, word, i, j, 0)) {
+            return true;
+          }
+        }
       }
     }
     return false;

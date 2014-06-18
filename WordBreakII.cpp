@@ -34,10 +34,10 @@ public:
     bool arrive = false;
     for (int i=0; i<size; i++) {
       for (int j=1; i+j<=size; j++) {
-	if (dict.find(s.substr(i,j)) != dict.end()) {
-	  next[i].push_back(i+j);
-	  arrive = arrive || i+j==size;
-	}
+        if (dict.find(s.substr(i,j)) != dict.end()) {
+          next[i].push_back(i+j);
+          arrive = arrive || i+j==size;
+        }
       }
     }
     if (arrive) {

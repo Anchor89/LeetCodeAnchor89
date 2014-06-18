@@ -9,9 +9,9 @@ public:
     while(tail-head>1) {
       int mid = (head&tail) + ((head^tail) >> 1);
       if (A[mid] >= target) {
-	tail = mid;
+        tail = mid;
       } else {
-	head = mid;
+        head = mid;
       }
     }
     return tail;

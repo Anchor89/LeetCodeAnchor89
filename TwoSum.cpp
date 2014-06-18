@@ -12,11 +12,11 @@ public:
     while(head<tail) {
       int t = head->second + tail->second;
       if ( t == target) {
-	return vector<int>{min(head->first, tail->first), max(head->first, tail->first)};
+        return vector<int>{min(head->first, tail->first), max(head->first, tail->first)};
       } else if (t < target) {
-	head++;
+        head++;
       } else {
-	tail--;
+        tail--;
       }
     }
     return vector<int>(2, 0);

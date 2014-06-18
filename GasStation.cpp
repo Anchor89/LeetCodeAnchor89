@@ -10,10 +10,10 @@ public:
     copy(rest.begin(), rest.begin()+sz, rest.begin()+sz);
     while(tail-head<sz && head < sz) {
       if(left < 0) {
-	head = tail++;
-	left = rest[head];
+        head = tail++;
+        left = rest[head];
       } else {
-	left += rest[tail++];
+        left += rest[tail++];
       }
     }
     return left<0 || head == sz? -1:head;

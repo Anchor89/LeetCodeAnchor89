@@ -17,7 +17,7 @@ public:
     for (int i=size1+size2-2; i>=0; i--) {
       int sum = carry;
       for (int j=min(size1-1, i), k=i-j; j>=0 && k<size2; j--, k++) {
-	sum += (num1[j]-'0') * (num2[k]-'0');
+        sum += (num1[j]-'0') * (num2[k]-'0');
       }
       carry = sum / 10;
       result[i+1] = (sum%10)+'0';

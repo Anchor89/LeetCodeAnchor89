@@ -13,7 +13,7 @@ public:
       cl.clear();
       cl.push_back(1);
       for (int j=1; j<min(cur, m); j++) {
-	cl.push_back(pl[j]+pl[j-1]);
+        cl.push_back(pl[j]+pl[j-1]);
       }
       cl.push_back(1);
     }

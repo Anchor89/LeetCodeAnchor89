@@ -12,12 +12,12 @@ public:
     }
     if (board[i][j] == '.') {
       for (int n=1; n<10; n++) {
-	if (col[j][n] || row[i][n] || grid[i/3][j/3][n]) continue;
-	col[j][n] = row[i][n] = grid[i/3][j/3][n] = true;
-	board[i][j] = '0' + n;
-	if (dfs(board, i, j+1)) return true;
-	board[i][j] = '.';
-	col[j][n] = row[i][n] = grid[i/3][j/3][n] = false;
+        if (col[j][n] || row[i][n] || grid[i/3][j/3][n]) continue;
+        col[j][n] = row[i][n] = grid[i/3][j/3][n] = true;
+        board[i][j] = '0' + n;
+        if (dfs(board, i, j+1)) return true;
+        board[i][j] = '.';
+        col[j][n] = row[i][n] = grid[i/3][j/3][n] = false;
       }
     } else {
       return dfs(board, i, j+1);
@@ -29,12 +29,12 @@ public:
     memset(grid, false, sizeof grid);
     for (int i=0; i<9; i++) {
       for (int j=0; j<9; j++) {
-	if (board[i][j] != '.') {
-	  int n = board[i][j] - '0';
-	  col[j][n] = true;
-	  row[i][n] = true;
-	  grid[i/3][j/3][n] = true;
-	}
+        if (board[i][j] != '.') {
+          int n = board[i][j] - '0';
+          col[j][n] = true;
+          row[i][n] = true;
+          grid[i/3][j/3][n] = true;
+        }
       }
     }
     dfs(board, 0, 0);

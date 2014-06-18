@@ -11,8 +11,8 @@ public:
       while(s[i-rad[i]]==s[i+rad[i]]) rad[i]++;
       rad[i]--;
       if (i+rad[i]>rm) {
-	rm = i+rad[i];
-	rmIdx = i;
+        rm = i+rad[i];
+        rmIdx = i;
       }
       if (rad[i] > rad[maxRad]) maxRad = i;
     }
@@ -21,7 +21,7 @@ public:
       res = s[2];    
     } else {
       for (int i=maxRad-rad[maxRad]; i<=maxRad+rad[maxRad]; i++) {
-	if (s[i] != '\2') res+=s[i];
+        if (s[i] != '\2') res+=s[i];
       }
     }
     return res;
@@ -45,13 +45,13 @@ public:
     for (int i=0,j; i<size; i++) {
       for (j=0; i-j>=0 && i+1+j<size && s[i-j] == s[i+1+j]; j++);
       if (j<<1 > result) {
-	result = j<<1;
-	h = i-j+1;
+        result = j<<1;
+        h = i-j+1;
       }
       for (j=1; i-j>=0 && i+j <size && s[i-j] == s[i+j]; j++);
       if ((j<<1)-1 > result) {
-	result = (j<<1)-1;
-	h = i-j+1;
+        result = (j<<1)-1;
+        h = i-j+1;
       }
     }
     return s.substr(h, result);

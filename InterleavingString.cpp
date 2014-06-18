@@ -12,7 +12,7 @@ public:
     dp[0][0] = true;
     for (int i=1; i<=sz3; i++) {
       for (int j=0; j<=min(i, sz1); j++) {
-	dp[i][j] = (j>0 && dp[i-1][j-1] && s3[i-1]==s1[j-1]) || (i-j>0 && dp[i-1][j] && s3[i-1] == s2[i-j-1]);
+        dp[i][j] = (j>0 && dp[i-1][j-1] && s3[i-1]==s1[j-1]) || (i-j>0 && dp[i-1][j] && s3[i-1] == s2[i-j-1]);
       }
     }
     for (int i=0; i<=sz1; i++) {

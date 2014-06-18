@@ -12,9 +12,9 @@ public:
     for (int i=1; i<size; i++) {
       l = i;
       while(!s.empty() && s.top().second > height[i]) {
-	result = max(result, s.top().second*(i-s.top().first));
-	l = s.top().first;
-	s.pop();
+        result = max(result, s.top().second*(i-s.top().first));
+        l = s.top().first;
+        s.pop();
       }
       s.push(Pair(l, height[i]));
     }

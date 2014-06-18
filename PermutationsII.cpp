@@ -11,9 +11,9 @@ public:
     T pivot = cur-1, mid = cur+(end-cur)/2, tail=end;
     while(tail-cur > 1) {
       if (*mid>*pivot) {
-	cur = mid;
+        cur = mid;
       } else {
-	tail = mid;
+        tail = mid;
       }
       mid = cur+(tail-cur)/2;
     }

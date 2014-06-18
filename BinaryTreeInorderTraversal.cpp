@@ -34,17 +34,17 @@ public:
     while(cur) {
       TreeNode* pre = getPre(cur);
       if (!pre) {
-	result.push_back(cur->val);
-	cur = cur->right;
+        result.push_back(cur->val);
+        cur = cur->right;
       } else {
-	if (pre->right == cur) {
-	  result.push_back(cur->val);
-	  pre->right = NULL;
-	  cur = cur->right;
-	} else {
-	  pre->right = cur;
-	  cur = cur->left;    
-	}
+        if (pre->right == cur) {
+          result.push_back(cur->val);
+          pre->right = NULL;
+          cur = cur->right;
+        } else {
+          pre->right = cur;
+          cur = cur->left;    
+        }
       }
     }
     return result;

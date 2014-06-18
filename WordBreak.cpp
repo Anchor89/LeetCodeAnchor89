@@ -9,7 +9,7 @@ public:
     for (int i=0; i<sz; i++) {
       dp[i] = dict.find(s.substr(0, i+1)) != dict.end();
       for (int j=0; j<i; j++) {
-	dp[i] = dp[i] || (dp[j] && dict.find(s.substr(j+1, i-j)) != dict.end());
+        dp[i] = dp[i] || (dp[j] && dict.find(s.substr(j+1, i-j)) != dict.end());
       }
     }
     return dp[sz-1];

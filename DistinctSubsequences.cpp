@@ -8,9 +8,9 @@ public:
     dp[0] = 1;
     for (int i=1; i<=S.size(); i++) {
       for (int j=T.size(); j>0; j--) {
-	if (S[i-1] == T[j-1]) {
-	  dp[j] += dp[j-1];
-	} 
+        if (S[i-1] == T[j-1]) {
+          dp[j] += dp[j-1];
+        } 
       }
     }
     return dp[T.size()];
@@ -25,7 +25,7 @@ public:
     fill(dp[0].begin(), dp[0].end(), 1); // For empty T, the distinct subsequences is always 1.
     for(int i=1; i<=tlen; i++) {
       for (int j=1; j<=slen; j++) {
-	dp[i][j] = dp[i][j-1] + (T[i-1] == S[j-1]? dp[i-1][j-1]:0);
+        dp[i][j] = dp[i][j-1] + (T[i-1] == S[j-1]? dp[i-1][j-1]:0);
       }
     }
     return dp[tlen][slen];

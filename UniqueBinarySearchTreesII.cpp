@@ -23,12 +23,12 @@ public:
       generateTrees(begin, cur, lt);
       generateTrees(cur+1, end, rht);
       for (int i=0; i<lt.size(); i++) {
-	for (int j=0; j<rht.size(); j++) {
-	  TreeNode* rt = new TreeNode(*cur);
-	  rt->left = lt[i];
-	  rt->right = rht[j];
-	  ret.push_back(rt);
-	}
+        for (int j=0; j<rht.size(); j++) {
+          TreeNode* rt = new TreeNode(*cur);
+          rt->left = lt[i];
+          rt->right = rht[j];
+          ret.push_back(rt);
+        }
       }
     }
   }

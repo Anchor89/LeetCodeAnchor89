@@ -15,7 +15,7 @@ public:
     for (int i=1; i<row; i++) g[i][0] = g[i][0] == 0? g[i-1][0]:0; // start from 1
     for (int i=1; i<row; i++) {
       for (int j=1; j<col; j++) {
-	g[i][j] = g[i][j] == 0? g[i-1][j]+g[i][j-1]:0;
+        g[i][j] = g[i][j] == 0? g[i-1][j]+g[i][j-1]:0;
       }
     }
     return g[row-1][col-1];

@@ -9,8 +9,8 @@ public:
     for (int i=0; i<sz-1; i++) {
       fill_n(row[1-(i&1)].begin(), i, INT_MAX);
       for (int j=0; j<=i; j++) {
-	row[1-(i&1)][j] = min(row[1-(i&1)][j], row[i&1][j]+triangle[i+1][j]);
-	row[1-(i&1)][j+1] = min(row[1-(i&1)][j+1], row[i&1][j]+triangle[i+1][j+1]);
+        row[1-(i&1)][j] = min(row[1-(i&1)][j], row[i&1][j]+triangle[i+1][j]);
+        row[1-(i&1)][j+1] = min(row[1-(i&1)][j+1], row[i&1][j]+triangle[i+1][j+1]);
       }
     }
     for (int i=0; i<sz; i++) {
