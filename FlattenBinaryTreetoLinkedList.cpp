@@ -28,3 +28,22 @@ public:
     if (root) flattenWithTail(root);
   }
 };
+
+
+
+/* Solution 2 */
+class Solution {
+public:
+  void flatten(TreeNode *root) {
+    if (!root) return;
+    TreeNode* left = root->left;
+    TreeNode* right=  root->right;
+    root->left = root->right = nullptr;
+    flatten(left);
+    flatten(right);
+    root->right = left;
+    TreeNode* tail = root;
+    while(tail->right) tail=tail->right;
+    tail->right = right;
+  }
+};
